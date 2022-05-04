@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <context:annotation-config/>
+ <context:property-placeholder location="classpath:student.properties"/>
+ 
+ <!--Autowiring using byName bean name and property name must be same-->
+<!--  
+ <bean id="d" class="org.spring.Autowiring.Driver"/>
+ <bean id="car" class="org.spring.Autowiring.Car" autowire="byName"/> 
+-->
+
+<!--Autowring using ByType no more than one bean it will give fatal exception-->
+
+<!--  
+ <bean id="driver" class="org.spring.Autowiring.Driver"/>
+ <bean id="car" class="org.spring.Autowiring.Car" autowire="byType"/>  
+-->
+
+<!--Autowiring using constructor -->
+
+<!--  
+ <bean id="driver" class="org.spring.Autowiring.Driver"/>
+ <bean id="car" class="org.spring.Autowiring.Car" autowire="constructor"/> 
+-->
+
+<!-- @Qualifier Annotation-->
+<!-- 
+  <bean id="driver" class="org.spring.Autowiring.Driver"/>
+  <bean id="drive" class="org.spring.Autowiring.Driver"/>
+
+  <bean id="car" class="org.spring.Autowiring.Car"/>  
+-->
+
+<!--Injecting literal values using properties file-->
+<!-- 
+ <bean id="student" class="literalValuesInjection.Student">
+ <property name="name" value="${student.name}"/>
+ <property name="course" value="${student.course}"/>
+ </bean> 
+-->
+
+<bean id="student" class="literalValuesInjection.Student" />
+ 
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+

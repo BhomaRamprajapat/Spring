@@ -1,4 +1,4 @@
-package org.spring.Sample;
+package org.spring.Autowiring;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
